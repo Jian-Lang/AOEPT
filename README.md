@@ -14,7 +14,7 @@ Deploying multimodal systems in real-world environments often entails handling m
 
 # Framework
 
-![alt text](image.png)
+![alt text](framework.png)
 
 ## Code Structure
 
