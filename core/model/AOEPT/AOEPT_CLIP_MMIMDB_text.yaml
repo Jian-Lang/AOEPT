@@ -1,0 +1,33 @@
+mode: train
+data:
+  missing_type: text
+  missing_rate: 0.7
+  seq_len: 77
+  arch: CLIP
+para:
+  cls_num: 23
+  max_text_len: 77
+  arch: CLIP
+  missing_type: text
+  L: 12
+  prompt_depth: 4
+  reduction_ratio: 16
+  loss_alpha: 0.05
+  N: 32
+  init_from_token: cache/collect_token_cluster_128/CLIP-MMIMDB-text-0.7-mean.pt
+opt:
+  name: AdamW
+  lr: 1e-2
+  weight_decay: 1e-4
+sche:
+  name: CosineDecayWithWarmup
+  warmup_rate: 0.1
+
+num_epoch: 20
+batch_size: 128
+seed: 2026
+model: AOEPT
+dataset: MMIMDB
+type: default
+patience: 20
+task: classification

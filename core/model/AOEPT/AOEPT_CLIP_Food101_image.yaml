@@ -1,0 +1,40 @@
+mode: train
+data:
+  missing_type: image
+  missing_rate: 0.7
+  seq_len: 77
+  arch: CLIP
+para:
+  cls_num: 101
+  max_text_len: 77
+  arch: CLIP
+  missing_type: image
+  L: 6
+  prompt_depth: 4
+  reduction_ratio: 16
+  loss_alpha: 0.05
+  N: 32
+  init_from_token: cache/collect_token_cluster_256/CLIP-Food101-image-0.7-mean.pt
+opt:
+  name: AdamW
+  lr: 1e-2
+  weight_decay: 2e-2
+sche:
+  name: CosineDecayWithWarmup
+  warmup_rate: 0.1
+# opt:
+#   name: AdamW
+#   lr: 2e-3
+#   weight_decay: 2e-2
+# sche:
+#   name: WarmupConstantLR
+#   warmup_rate: 0.1
+
+num_epoch: 20
+batch_size: 128
+seed: 2026
+model: AOEPT
+dataset: Food101
+type: default
+patience: 20
+task: classification

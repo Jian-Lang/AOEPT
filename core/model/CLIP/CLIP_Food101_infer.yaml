@@ -1,0 +1,20 @@
+mode: infer
+data:
+  split: train
+  missing_type: text
+  missing_rate: 0.7
+  seq_len: 77
+  arch: CLIP
+para:
+  cls_num: 101
+  max_text_len: 77
+  arch: CLIP
+  missing_type: text
+  statis: collect_token
+statis: collect_token
+batch_size: 64
+seed: 2026
+model: CLIP
+dataset: Food101
+task: classification
+ckpt_path: null

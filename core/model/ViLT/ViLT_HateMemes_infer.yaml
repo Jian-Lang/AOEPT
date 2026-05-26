@@ -1,0 +1,20 @@
+mode: infer
+data:
+  split: train
+  missing_type: text
+  missing_rate: 0.7
+  seq_len: 40
+  arch: ViLT
+para:
+  cls_num: 2
+  max_text_len: 40
+  arch: ViLT
+  missing_type: text
+  statis: collect_token
+statis: collect_token
+batch_size: 64
+seed: 2026
+model: ViLT
+dataset: HateMemes
+task: classification
+ckpt_path: null
