@@ -1,8 +1,17 @@
 # AOEPT
 
+<p align="left">
+  <a href="https://jianlang.org/projects/aoept">
+    <img src="https://img.shields.io/badge/Project-Page-2f80ed?style=flat-square" alt="Project Page">
+  </a>
+  <a href="https://arxiv.org/abs/2605.24816">
+    <img src="https://img.shields.io/badge/arXiv-2605.24816-b31b1b?style=flat-square" alt="arXiv 2605.24816">
+  </a>
+</p>
+
+
 This repo is the official implementation of `AOEPT: Breaking the Implicit Modality-Reduction Bottleneck in Modality Missing Prompt Tuning` accepted by **ICML 2026**.
 
-Paper Link: https://arxiv.org/abs/2605.24816
 
 > [!IMPORTANT]
 >
